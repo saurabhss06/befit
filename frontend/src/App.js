@@ -316,10 +316,10 @@ const Workouts = () => {
         </div>
         <Button
           onClick={() => setShowAddWorkout(true)}
-          className="bg-gradient-to-r from-electric-blue to-cyan-500 hover:from-electric-blue/90 hover:to-cyan-500/90 text-white rounded-full h-14 w-14 p-0 shadow-xl"
+          className="bg-gradient-to-r from-electric-blue via-cyan-500 to-electric-blue hover:scale-105 text-white rounded-full h-14 w-14 p-0 shadow-2xl border-4 border-white dark:border-gray-900 animate-pulse hover:animate-none"
           data-testid="add-workout-button"
         >
-          <Plus className="h-7 w-7" />
+          <Plus className="h-8 w-8 stroke-[3]" />
         </Button>
       </div>
 
