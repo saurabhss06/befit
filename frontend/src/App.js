@@ -619,10 +619,10 @@ const Nutrition = () => {
         </div>
         <Button
           onClick={() => setShowAddMeal(true)}
-          className="bg-gradient-to-r from-lime-green to-green-500 hover:from-lime-green/90 hover:to-green-500/90 text-white rounded-full h-14 w-14 p-0 shadow-xl"
+          className="bg-gradient-to-r from-lime-green via-green-500 to-lime-green hover:scale-105 text-white rounded-full h-14 w-14 p-0 shadow-2xl border-4 border-white dark:border-gray-900 animate-pulse hover:animate-none"
           data-testid="add-meal-button"
         >
-          <Plus className="h-7 w-7" />
+          <Plus className="h-8 w-8 stroke-[3]" />
         </Button>
       </div>
 
