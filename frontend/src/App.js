@@ -48,7 +48,7 @@ const useTheme = () => useContext(ThemeContext);
 const Dashboard = () => {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { isDark } = useTheme();
+  const { isDark, setIsDark } = useTheme();
 
   useEffect(() => {
     fetchStats();
