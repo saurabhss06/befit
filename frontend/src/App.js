@@ -937,7 +937,7 @@ const Progress_Page = () => {
 const Profile = () => {
   const [profile, setProfile] = useState(null);
   const [editing, setEditing] = useState(false);
-  const { isDark, setIsDark } = useTheme();
+  const { isDark } = useTheme();
   const [formData, setFormData] = useState({
     name: '',
     age: '',
