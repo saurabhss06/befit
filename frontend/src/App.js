@@ -84,14 +84,27 @@ const Dashboard = () => {
 
   return (
     <div className="pb-24 px-4 pt-6 min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-slate-900 dark:to-gray-900" data-testid="dashboard-page">
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="p-2 bg-gradient-to-br from-electric-blue to-cyan-400 rounded-xl shadow-lg">
-            <Activity className="h-6 w-6 text-white" />
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-gradient-to-br from-electric-blue to-cyan-400 rounded-xl shadow-lg">
+              <Activity className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent" data-testid="dashboard-greeting">Welcome Back!</h1>
+            </div>
           </div>
-          <div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent" data-testid="dashboard-greeting">Welcome Back!</h1>
-          </div>
+          <button
+            onClick={() => setIsDark(!isDark)}
+            className="p-2.5 rounded-xl bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-electric-blue dark:hover:border-electric-blue shadow-md hover:shadow-lg transition-all"
+            data-testid="theme-toggle-button"
+          >
+            {isDark ? (
+              <Sun className="h-5 w-5 text-energy-orange" />
+            ) : (
+              <Moon className="h-5 w-5 text-electric-blue" />
+            )}
+          </button>
         </div>
         <p className="text-gray-600 dark:text-gray-400 ml-14" data-testid="dashboard-date">{new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</p>
       </div>
