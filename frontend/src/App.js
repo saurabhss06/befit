@@ -1034,30 +1034,6 @@ const Profile = () => {
         )}
       </div>
 
-      {/* Dark Mode Toggle */}
-      <Card className="mb-6 border-0 shadow-xl bg-white dark:bg-gray-800">
-        <CardContent className="pt-6 pb-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              {isDark ? (
-                <Moon className="h-5 w-5 text-electric-blue" />
-              ) : (
-                <Sun className="h-5 w-5 text-energy-orange" />
-              )}
-              <div>
-                <p className="font-semibold text-gray-900 dark:text-white">Dark Mode</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Toggle app theme</p>
-              </div>
-            </div>
-            <Switch
-              checked={isDark}
-              onCheckedChange={setIsDark}
-              className="data-[state=checked]:bg-electric-blue"
-            />
-          </div>
-        </CardContent>
-      </Card>
-
       {editing ? (
         <form onSubmit={handleSubmit} className="space-y-4" data-testid="profile-form">
           <Card className="border-0 shadow-xl bg-white dark:bg-gray-800">
